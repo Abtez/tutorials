@@ -6,6 +6,9 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
 
+def index(request):
+    return render(request, 'index.html')
+
 @csrf_exempt
 def tutorials_list(request):
     """
